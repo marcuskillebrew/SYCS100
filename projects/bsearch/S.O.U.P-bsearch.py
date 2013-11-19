@@ -79,4 +79,20 @@ def bsearchRecursive(L, S, Min, Max):
     	return Mid
       else:
     	return -1
-  
+#Marcus Killebrew 
+
+def binarySearch(BCL , Points): #Defines the fuction binarySearch with the parameters (BCL,Points)
+	low = 0 #First element in the list.
+	high = len(BCL) - 1 #Last element in the list.
+	while low <= high: #Condition for while loop.
+		middle = (low+high)/2 #cuts the list in half when searching for the element.
+	if BCL[middle] < Points: #If the element is Less that then next line.
+		low =middle + 1
+        if BCL[middle]== Points:#If equal to divide middle by 2 to find the element in the lower half of the list.
+        	middle= middle/2
+        elif Points <BCL[middle]: #If Greater than...
+        	high = middle - 1
+        	return middle #Exit loop and function if element is found and loop is true.
+        else:
+        	return -1 #Exit funtion and return -1 if False.
+       
